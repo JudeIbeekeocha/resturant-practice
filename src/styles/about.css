@@ -1,0 +1,21 @@
+.about-content{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.description{
+    text-align: center;
+}
+
+.hours{
+    background-color: rgba(65, 64, 64, 0.398);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
