@@ -1,0 +1,30 @@
+.menu-content{
+    /* font-size: 50px; */
+    margin-top: 10px;
+    font-family: "Fleur De Leah", cursive;
+    overflow: scroll;
+}
+.menu-items{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: scroll;
+}
+
+.menu-title{
+    font-size: 50px;
+}
+.item-container{
+    margin-bottom: 10px;
+    overflow: scroll;
+}
+.item-name{
+    font-weight: 600;
+}
+.item-description{
+    font-weight: 200;
+    font-style: italic;
+}
+.desert,
+.appetizers,
+.entree{
+    overflow: scroll;
+}
