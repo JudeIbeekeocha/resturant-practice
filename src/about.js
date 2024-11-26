@@ -43,6 +43,7 @@ export function renderAboutPage(){
           <h2>Location</h2>
           <p>123 Starry Lane</p>
           <p>Downtown Cityville, 12345</p>
+          <o>Testing changes to website</p>
         </div>
       </div>
 
