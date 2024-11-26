@@ -1,59 +1,20 @@
 import "./styles/menu.css";
 
-const menu = [
-    {
-        name: 'Crispy Duck Spring Rolls', 
-        description: 'Served with hoisin dipping sauce.',
-        price: 18,
-        type: 'appetizer'
-    },
-    {
-        name: 'Burrata and Heirloom Tomato Salad', 
-        description: 'With basil pesto and balsamic reduction.',
-        price: 16,
-        type: 'appetizer'
-    },
-    {
-        name: 'Seared Scallops', 
-        description: 'Paired with a citrus beurre blanc and microgreens.',
-        price: 22,
-        type: 'appetizer'
-    },
-    {
-        name: 'Grilled Salmon with Lemon Butter Sauce', 
-        description: 'Accompanied by roasted asparagus and wild rice pilaf.',
-        price: 36,
-        type: 'entree'
-    },
-    {
-        name: 'Filet Mignon with Red Wine Reduction', 
-        description: 'Served with truffle mashed potatoes and sautéed green beans.',
-        price: 48,
-        type: 'entree'
-    },
-    {
-        name: 'Wild Mushroom Risotto', 
-        description: 'Finished with Parmesan cheese and white truffle oil.',
-        price: 28,
-        type: 'entree'
-    },
-    {
-        name: 'Dark Chocolate Tart', 
-        description: 'Topped with fresh berries and sea salt caramel.',
-        price: 14,
-        type: 'desert'
-    },
-    {
-        name: 'Vanilla Bean Crème Brûlée', 
-        description: 'With a caramelized sugar crust.',
-        price: 12,
-        type: 'desert'
-    },
+async function fetchMenu(){
+    let menu;
+    try{
+        const response = await fetch('http://127.0.0.1:5001/menu')
+        menu = await response.json()
+        // console.log(menu)
+        // console.log(typeof menu)
 
-]
+    }catch (error){
+        console.log('Error fetching the menu:', error)
+    }
+    return menu
+}
 
-
-
+const menu = await fetchMenu()
 
 
 export function renderMenuPage(){
@@ -92,7 +53,6 @@ export function renderMenuPage(){
     menuItems.appendChild(appetizers)
     menuItems.appendChild(entree)
     menuItems.appendChild(desert)
-
     menu.forEach((item)=>{
         if (item.type === 'appetizer'){
             appetizerHTML += `
